@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    {% for book in object_list %}
+
+<h1>s.no :::::  {{forloop.counter}}</h1>
+    <li>name::::{{book.name}}</li>
+    <li>email::::{{book.email}}</li>
+    <li>dob::::{{book.dob}}</li>
+    <li>address::::{{book.address}}</li>
+    <li>place::::{{book.place}}</li>
+     {% endfor %}
+    
+
+
+</body>
+</html>
